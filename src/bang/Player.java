@@ -38,6 +38,31 @@ public class Player {
         // TODO
     }
 
+    /**
+     * Returns true if this player has at least one BANG card in their hand.
+     *
+     * TODO: Loop through hand. If any card has type BANG, return true.
+     *       If you finish the loop without finding one, return false.
+     */
+    public boolean hasBang() {
+        // TODO: loop through hand, return true if any card is BANG
+        return false;
+    }
+
+    public Card playBang() {
+        // TODO: find a BANG card, remove it from hand, and return it
+        return null;
+    }
+
+    public void takeDamage() {
+        // TODO: reduce health by 1 (don't let it go below 0)
+    }
+
+    public boolean isEliminated() {
+        // TODO: return true if health is 0 or less
+        return false;
+    }
+
     // TODO
     public String getName() {
         return "WRONG ANSWER";
