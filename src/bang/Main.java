@@ -21,9 +21,9 @@ public class Main {
         System.out.println("Deck size:" + deck.size());
         // TODO (step 1b): Draw 3 cards and print each one
         //   Expected: three lines each showing BANG or MISSED
-        System.out.println(deck.draw());
-        System.out.println(deck.draw());
-        System.out.println(deck.draw());
+        for(int i = 0; i < 3; i++){
+            System.out.println(deck.draw());
+        }
         // TODO (step 1c): Print the deck size again after drawing
         //   Expected: "Deck size: 13"
         System.out.println("Deck size: " + deck.size());
