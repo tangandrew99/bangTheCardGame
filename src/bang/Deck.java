@@ -27,7 +27,14 @@ public class Deck {
      * TODO: Add 10 BANG cards and 6 MISSED cards to drawPile.
      */
     private void buildDeck() {
-        // TODO
+        for(int i = 0; i < 10; i++){
+            Card BANG = new Card("BANG");
+            drawPile.add(BANG);
+        }
+        for(int j = 0; j < 6; j++){
+            Card Missed = new Card("Missed");
+            drawPile.add(Missed);
+        }
     }
 
     /**
@@ -36,8 +43,9 @@ public class Deck {
      * Hint: ArrayList has a remove(index) method that removes AND returns the item
      */
     public Card draw() {
-        // TODO
-        return null;
+//        Card diswon = drawPile.remove(0);
+//        return diswon;
+        return drawPile.remove(0);
     }
 
     /**
@@ -45,6 +53,6 @@ public class Deck {
      * Already done for you — useful for testing.
      */
     public int size() {
-        return 10000000;
+        return drawPile.size();
     }
 }

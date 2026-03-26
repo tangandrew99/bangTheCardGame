@@ -26,7 +26,7 @@ public class Player {
      * TODO: add the card to hand
      */
     public void addCard(Card card) {
-        // TODO
+        hand.add(card);
     }
 
     /**
@@ -35,7 +35,11 @@ public class Player {
      * TODO: print something like: Alice's hand: [BANG, MISSED, BANG]
      */
     public void printHand() {
-        // TODO
+        System.out.print(name + " hand: ");
+        for(int i = 0; i < 4; i++){
+            System.out.print(hand.get(i) + ", ");
+        }
+        System.out.println();
     }
 
     /**
@@ -46,7 +50,7 @@ public class Player {
      */
     public boolean hasBang() {
         // TODO: loop through hand, return true if any card is BANG
-        return false;
+        return  false;
     }
 
     public Card playBang() {
@@ -65,7 +69,7 @@ public class Player {
 
     // TODO
     public String getName() {
-        return "WRONG ANSWER";
+        return "wrong";
     }
 
     // TODO

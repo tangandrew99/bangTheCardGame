@@ -18,28 +18,37 @@ public class Main {
 
         // TODO (step 1a): Print how many cards are in the deck before drawing
         //   Expected: "Deck size: 16"
-
+        System.out.println("Deck size: " + deck.size());
         // TODO (step 1b): Draw 3 cards and print each one
         //   Expected: three lines each showing BANG or MISSED
-
+        for(int i = 0; i < 3; i++){
+            System.out.println(deck.draw());
+        }
         // TODO (step 1c): Print the deck size again after drawing
         //   Expected: "Deck size: 13"
-
+        System.out.println("Deck size: " + deck.size());
 
         // ----------------------------------------------------------------
         // MILESTONE 2: Create players and deal them cards
         // ----------------------------------------------------------------
 
         // TODO (step 2a): Create two players (give them names)
-
+        Player Ariel = new Player("Ariel");
+        Player Moana = new Player("Moana");
         // TODO (step 2b): Deal 4 cards from the deck to each player
         //   Hint: use a loop that calls deck.draw() and player.addCard()
-
+        for(int i = 0; i < 4; i++){
+            Ariel.addCard(deck.draw());
+        }
+        for(int i = 0; i < 4; i++){
+            Moana.addCard(deck.draw());
+        }
         // TODO (step 2c): Call printHand() on each player
         //   Expected: each player's name and their 4 cards
-
+        Ariel.printHand();
+        Moana.printHand();
         // TODO (step 2d): Print the deck size one more time
         //   Expected: "Deck size: 8"  (16 - 3 drawn earlier - 4 - 4)
-
+        System.out.println("Deck size: " + deck.size());
     }
 }
