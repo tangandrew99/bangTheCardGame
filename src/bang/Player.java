@@ -27,6 +27,7 @@ public class Player {
      */
     public void addCard(Card card) {
         // TODO
+        hand.add(card);
     }
 
     /**
@@ -36,8 +37,8 @@ public class Player {
      */
     public void printHand() {
         // TODO
+        System.out.println(name + ": " + hand.get(0) + " " + hand.get(1) + " " + hand.get(2) + " " + hand.get(3));
     }
-
     /**
      * Returns true if this player has at least one BANG card in their hand.
      *
