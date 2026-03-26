@@ -48,7 +48,7 @@ public class Main {
         Zuko.printHand();
         Iroh.printHand();
         // TODO (step 2d): Print the deck size one more time
-        //   Expected: "Deck size: 8 jk 5 because Imma retard"  (16 - 3 drawn earlier - 4 - 4)
+        //   Expected: "Deck size: 5 (16 - 3 drawn earlier - 4 - 4)
         System.out.println("Deck size: " + deck.size());
     }
 }
