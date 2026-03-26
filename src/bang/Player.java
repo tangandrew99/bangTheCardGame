@@ -36,8 +36,11 @@ public class Player {
      * TODO: print something like: Alice's hand: [BANG, MISSED, BANG]
      */
     public void printHand() {
-        // TODO
-        System.out.println(name + ": " + hand.get(0) + " " + hand.get(1) + " " + hand.get(2) + " " + hand.get(3));
+        System.out.print(name + " hand: ");
+        for(int i = 0; i < 4; i++){
+            System.out.print(hand.get(i) + ", ");
+        }
+        System.out.println();
     }
     /**
      * Returns true if this player has at least one BANG card in their hand.
