@@ -23,21 +23,28 @@ public class Deck {
 
     /**
      * Adds cards to the draw pile.
-     *
+     * <p>
      * TODO: Add 10 BANG cards and 6 MISSED cards to drawPile.
      */
     private void buildDeck() {
-        // TODO
+        for (int i = 0; i < 10; i++) {
+            Card card = new Card("Bang");
+            drawPile.add(card);
+        }
+        for (int i = 0; i < 6; i++) {
+            Card card = new Card("Missed");
+            drawPile.add(card);
+        }
     }
 
     /**
      * Removes the top card from the draw pile and returns it.
-     *
+     * <p>
      * Hint: ArrayList has a remove(index) method that removes AND returns the item
      */
     public Card draw() {
         // TODO
-        return null;
+        return drawPile.remove(0);
     }
 
     /**
@@ -45,6 +52,6 @@ public class Deck {
      * Already done for you — useful for testing.
      */
     public int size() {
-        return 10000000;
+        return drawPile.size();
     }
 }
