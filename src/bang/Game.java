@@ -34,12 +34,17 @@ public class Game {
     /**
      * Deals starting cards to both players.
      * Each player should start with STARTING_HEALTH cards.
-     *
+     * <p>
      * TODO: use a loop to draw cards from the deck and add them to each player.
      * Hint: Player.STARTING_HEALTH tells you how many cards to deal.
      */
-    private void dealStartingHands() {
+
+    public void dealStartingHands() {
         // TODO
+        drawCards(player1, Player.STARTING_HEALTH);
+        drawCards(player2, Player.STARTING_HEALTH);
+        player1.printHand();
+        player2.printHand();
     }
 
     // -------------------------------------------------------------------------
@@ -48,14 +53,14 @@ public class Game {
 
     /**
      * Runs one full turn for 'current' player, shooting at 'opponent'.
-     *
+     * <p>
      * A turn in this milestone:
-     *   1. Print whose turn it is and show both players' status
-     *   2. Draw 2 cards from the deck
-     *   3. If the player has a Bang!, ask if they want to shoot
-     *   4. If yes — play the Bang!, opponent takes damage, print what happened
-     *   5. If no Bang! (or they pass) — print that they pass
-     *
+     * 1. Print whose turn it is and show both players' status
+     * 2. Draw 2 cards from the deck
+     * 3. If the player has a Bang!, ask if they want to shoot
+     * 4. If yes — play the Bang!, opponent takes damage, print what happened
+     * 5. If no Bang! (or they pass) — print that they pass
+     * <p>
      * TODO: implement the steps above using the helper methods below.
      * Hint: use scanner.nextLine() to read input, and check if it equals "y"
      */
@@ -63,7 +68,10 @@ public class Game {
         System.out.println("\n--- " + current.getName() + "'s turn ---");
 
         // TODO: step 1 — print status of both players (use printStatus())
+        player1.printStatus();
+        player2.printStatus();
         // TODO: step 2 — draw 2 cards for current player
+
         // TODO: step 3 — if current.hasBang(), ask "Play a Bang? (y/n)"
         // TODO: step 4 — if yes, play the Bang! and opponent takes damage
         // TODO: step 5 — if no Bang! or they pass, print that they pass
@@ -75,14 +83,14 @@ public class Game {
 
     /**
      * Starts and runs the game.
-     *
+     * <p>
      * TODO:
      *   1. Call dealStartingHands()
      *   2. Print "Game start!" and both players' status
      *   3. Loop, alternating turns between player1 and player2,
      *      until one player is eliminated
      *   4. Print who won
-     *
+     * <p>
      * Hint for alternating turns: keep a variable for 'current' and 'opponent'
      * and swap them at the end of each loop iteration.
      */
@@ -104,6 +112,9 @@ public class Game {
      * You can call this from dealStartingHands() and takeTurn().
      */
     private void drawCards(Player player, int count) {
-        // TODO: do this, u dumb
+        //go to player hand and add the amount of cards to the hand
+        for (int i = 0; i < count; i++) {
+            player.addCard(deck.draw());
+        }
     }
 }

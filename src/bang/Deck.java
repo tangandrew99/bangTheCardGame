@@ -26,7 +26,7 @@ public class Deck {
      * <p>
      * TODO: Add 10 BANG cards and 6 MISSED cards to drawPile.
      */
-    private void buildDeck() {
+    public void buildDeck() {
         for (int i = 0; i < 10; i++) {
             Card card = new Card("Bang");
             drawPile.add(card);

@@ -12,12 +12,16 @@ import java.util.ArrayList;
  */
 public class Player {
 
+    public static int STARTING_HEALTH = 4;
+
     private String name;
     private ArrayList<Card> hand;
+    public int currentHealth;
 
     public Player(String name) {
         this.name = name;
         this.hand = new ArrayList<>();
+        this.currentHealth = STARTING_HEALTH;
     }
 
     /**
@@ -48,6 +52,12 @@ public class Player {
      * TODO: Loop through hand. If any card has type BANG, return true.
      *       If you finish the loop without finding one, return false.
      */
+
+
+    public void printStatus(){
+        System.out.println(name + " has " + hand + ". " + name + " also has " + currentHealth + " lives remaining.");
+    }
+
     public boolean hasBang() {
         // TODO: loop through hand, return true if any card is BANG
         return false;
