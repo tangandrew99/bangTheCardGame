@@ -17,7 +17,7 @@ public class Game {
 
     private Player player1;
     private Player player2;
-    private Deck deck;
+    public Deck deck;
     private Scanner scanner;
 
     public Game(String name1, String name2) {
@@ -38,8 +38,15 @@ public class Game {
      * TODO: use a loop to draw cards from the deck and add them to each player.
      * Hint: Player.STARTING_HEALTH tells you how many cards to deal.
      */
-    private void dealStartingHands() {
+
+    public void dealStartingHands() {
         // TODO
+        drawCards(player1, Player.STARTING_HEALTH);
+        drawCards(player2, Player.STARTING_HEALTH);
+//
+//          uncomment if you want to test it.
+//        player1.printHand();
+//        player2.printHand();
     }
 
     // -------------------------------------------------------------------------
@@ -63,10 +70,24 @@ public class Game {
         System.out.println("\n--- " + current.getName() + "'s turn ---");
 
         // TODO: step 1 — print status of both players (use printStatus())
-        // TODO: step 2 — draw 2 cards for current player
-        // TODO: step 3 — if current.hasBang(), ask "Play a Bang? (y/n)"
-        // TODO: step 4 — if yes, play the Bang! and opponent takes damage
-        // TODO: step 5 — if no Bang! or they pass, print that they pass
+//        player1.printStatus();
+//        player2.printStatus();
+//        // TODO: step 2 — draw 2 cards for current player
+//        player1.draw();
+//        player1.draw();
+//        player2.draw();
+//        player2.draw();
+//        // TODO: step 3 — if current.hasBang(), ask "Play a Bang? (y/n)"
+//        if(current.hasBang() == true) {
+//            System.out.println("Play a Bang? (y/n)");
+//        }
+//        // TODO: step 4 — if yes, play the Bang! and opponent takes damage
+//        if(something...) {
+//            //play bang
+//        // TODO: step 5 — if no Bang! or they pass, print that they pass
+//            if(no) {
+//                System.out.println("Your oppenent has passed");
+//            }
     }
 
     // -------------------------------------------------------------------------
@@ -78,6 +99,7 @@ public class Game {
      *
      * TODO:
      *   1. Call dealStartingHands()
+     *
      *   2. Print "Game start!" and both players' status
      *   3. Loop, alternating turns between player1 and player2,
      *      until one player is eliminated
@@ -87,12 +109,17 @@ public class Game {
      * and swap them at the end of each loop iteration.
      */
     public void start() {
-        dealStartingHands();
-        System.out.println("=== Game Start! ===");
-
-        // TODO: game loop — alternate turns until someone is eliminated
-
-        // TODO: print the winner
+//        dealStartingHands();
+//        System.out.println("=== Game Start! ===");
+//        player1.printStatus();
+//        player2.printStatus();
+//        // TODO: game loop — alternate turns until someone is eliminated
+//        if((player1 == eliminated) || (player2 == eliminated)) {
+//            String winner = the guy who isnt eliminated
+//            break;
+//        }
+//        // TODO: print the winner
+//            System.out.println("The winner is: " + winner);
     }
 
     // -------------------------------------------------------------------------
@@ -105,5 +132,8 @@ public class Game {
      */
     private void drawCards(Player player, int count) {
         // TODO: do this, u dumb
+        for (int i = 0; i < count; i++) {
+            player.addCard(deck.draw());
+        }
     }
 }

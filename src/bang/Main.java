@@ -50,5 +50,7 @@ public class Main {
         // TODO (step 2d): Print the deck size one more time
         //   Expected: "Deck size: 5 (16 - 3 drawn earlier - 4 - 4)
         System.out.println("Deck size: " + deck.size());
+        Game game = new Game("zukomen", "irohmen");
+        game.dealStartingHands();
     }
 }

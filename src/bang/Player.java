@@ -14,12 +14,12 @@ public class Player {
 
     private String name;
     private ArrayList<Card> hand;
+    public static int STARTING_HEALTH = 4;
 
     public Player(String name) {
         this.name = name;
         this.hand = new ArrayList<>();
     }
-
     /**
      * Adds a card to this player's hand.
      *
@@ -48,28 +48,40 @@ public class Player {
      * TODO: Loop through hand. If any card has type BANG, return true.
      *       If you finish the loop without finding one, return false.
      */
-    public boolean hasBang() {
-        // TODO: loop through hand, return true if any card is BANG
-        return false;
-    }
-
-    public Card playBang() {
-        // TODO: find a BANG card, remove it from hand, and return it
-        return null;
-    }
-
-    public void takeDamage() {
-        // TODO: reduce health by 1 (don't let it go below 0)
-    }
-
-    public boolean isEliminated() {
-        // TODO: return true if health is 0 or less
-        return false;
-    }
+//    public boolean hasBang() {
+//        // TODO: loop through hand, return true if any card is BANG
+//        for(int i = 0; i < hand.size(); i++) {
+//            if(hand[i] == "Bang") {
+//                return true;
+//        }
+//            return false;
+//    }
+//
+//    public Card playBang() {
+//            // TODO: find a BANG card, remove it from hand, and return it
+//            for (int i = 0; i < hand.size(); i++) {
+//                if(hand[i] == "Bang") {
+//                   hand.remove(i);
+//                }
+//            }
+//        }
+//
+//    public void takeDamage() {
+//        // TODO: reduce health by 1 (don't let it go below 0)
+//        health -=;
+//    }
+//
+//    public boolean isEliminated() {
+//        // TODO: return true if health is 0 or less
+//        if(health <= 0) {
+//            return true;
+//        }
+//        return false;
+//    }
 
     // TODO
     public String getName() {
-        return "WRONG ANSWER";
+        return name;
     }
 
     // TODO
